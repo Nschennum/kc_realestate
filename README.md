@@ -1,4 +1,6 @@
-Django Framework Python App built on Windows via Bash Shell and Vitual Enviroment, using s PostgreSQL database, and basic HTML, Bootstrap, JQuery, and Lightbox for styling/functionality. 
+## KC Real Estate
+
+This app uses Django's Framework with Python; built on Windows via Bash Shell and Vitual Enviroment; a PostgreSQL database is used; and basic HTML, Bootstrap, JQuery, and Lightbox were utilized for styling/functionality. 
 
 ## Description 
 
