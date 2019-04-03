@@ -21,4 +21,4 @@ The Search form on the Home Page allows you to search current listings by Keywor
 
 Live app is available at: https://kc-real-estate.herokuapp.com/
 
-The admin login is available at: https://kc-real-estate.herokuapp.com/admin/   UN: admintest PW: test123
+The admin login is available at: https://kc-real-estate.herokuapp.com/admin/ 
