@@ -6,8 +6,8 @@ __pycache__/
 local_settings.py
 db.sqlite3
 venv
-/static
+
 .vscode
-/staticfiles
+
 .env
 /media
