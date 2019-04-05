@@ -149,6 +149,7 @@ STATICFILES_DIRS = ( os.path.join(BASE_DIR, "kcre/static"), )
 # STATICFILES_DIRS = [ os.path.join(BASE_DIR, 'kcre/static'), ]
 #stuff colloecting from
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/') #stuff collecting to
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
 # STATICFILES_FINDERS = (
 # 'django.contrib.staticfiles.finders.FileSystemFinder',
