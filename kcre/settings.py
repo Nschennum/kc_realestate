@@ -143,7 +143,7 @@ AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 STATIC_URL = 'https://' + AWS_STORAGE_BUCKET_NAME + '.s3.amazonaws.com/'
 MEDIA_URL = STATIC_URL + 'media/'
 STATICFILES_DIRS = ( os.path.join(BASE_DIR, "kcre/static"), )#stuff colloecting from
-STATIC_ROOT = 'static' #stuff collecting to
+STATIC_ROOT = 'staticfiles' #stuff collecting to
 ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
 STATICFILES_FINDERS = (
 'django.contrib.staticfiles.finders.FileSystemFinder',
