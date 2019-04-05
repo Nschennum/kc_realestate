@@ -170,7 +170,7 @@ AWS_DEFAULT_ACL = None
 # STATICFILES_DIRS = [
 #     os.path.join(BASE_DIR, 'kcre/static')
 # ]
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # MEDIA_URL = '/media/'
 
 # Messages
