@@ -25,7 +25,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+# Dev
 # SECRET_KEY = env('SECRET_KEY')
+# Prod
 SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -141,14 +143,17 @@ AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 
 #static media settings
 STATIC_URL = 'https://' + AWS_STORAGE_BUCKET_NAME + '.s3.amazonaws.com/'
-MEDIA_URL = STATIC_URL + 'media/'
-STATICFILES_DIRS = ( os.path.join(BASE_DIR, "kcre/static"), )#stuff colloecting from
-STATIC_ROOT = 'staticfiles' #stuff collecting to
-ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
-STATICFILES_FINDERS = (
-'django.contrib.staticfiles.finders.FileSystemFinder',
-'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-)
+# STATIC_URL = '/static/'
+MEDIA_URL = 'https://' + AWS_STORAGE_BUCKET_NAME + '.s3.amazonaws.com/' + 'media/'
+STATICFILES_DIRS = ( os.path.join(BASE_DIR, "kcre/static"), )
+# STATICFILES_DIRS = [ os.path.join(BASE_DIR, 'kcre/static'), ]
+#stuff colloecting from
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/') #stuff collecting to
+# ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
+# STATICFILES_FINDERS = (
+# 'django.contrib.staticfiles.finders.FileSystemFinder',
+# 'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+# )
 
 # AWS_S3_OBJECT_PARAMETERS = {
 #     'CacheControl': 'max-age=86400',

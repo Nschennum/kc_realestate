@@ -1,11 +1,11 @@
 {% extends 'admin/base.html' %} 
-{% load staticfiles %} 
+{% load static %} 
 
 {% block branding %}
 <h1 id="head">
-  <img src="{% staticfiles 'img/logo.png' %}" alt="KC Real Estate" height="50" width="50" class="brand_img">         Admin Area 
+  <img src="{% static 'img/logo.png' %}" alt="KC Real Estate" height="50" width="50" class="brand_img">         Admin Area 
 </h1>
 {% endblock %}
  {% block extrastyle %}
-<link rel="stylesheet" href="{% staticfiles 'css/admin.css' %}">
+<link rel="stylesheet" href="{% static 'css/admin.css' %}">
  {% endblock %}
