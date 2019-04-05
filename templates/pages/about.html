@@ -1,4 +1,4 @@
-{% extends 'base.html' %} {% load static %}
+{% extends 'base.html' %} {% load staticfiles %}
 {% block title %} | About Us{% endblock %}
  {% block content %}
 
@@ -39,7 +39,7 @@
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt,
           pariatur!
         </p>
-        <img src="{% static 'img/about.jpg' %}" alt="" />
+        <img src="{% staticfiles 'img/about.jpg' %}" alt="" />
         <p class="mt-4">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
           esse officia repudiandae ad saepe ex, amet neque quod accusamus rem

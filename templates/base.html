@@ -1,4 +1,4 @@
-{% load static %}
+{% load staticfiles %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -7,13 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="{% static 'css/all.css' %}" />
+    <link rel="stylesheet" href="{% staticfiles 'css/all.css' %}" />
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" />
+    <link rel="stylesheet" href="{% staticfiles 'css/bootstrap.css' %}" />
     <!-- Custom -->
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% staticfiles 'css/style.css' %}" />
     <!-- Lightbox -->
-    <link rel="stylesheet" href="{% static 'css/lightbox.min.css' %}" />
+    <link rel="stylesheet" href="{% staticfiles 'css/lightbox.min.css' %}" />
 
     <title>KC Real Estate {% block title %} {% endblock %}</title>
   </head>
@@ -28,10 +28,10 @@
 <!-- Footer -->
 {%  include 'partials/_footer.html'%}
 
-    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
-    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
-    <script src="{% static 'js/lightbox.min.js' %}"></script>
-    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% staticfiles 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% staticfiles 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% staticfiles 'js/lightbox.min.js' %}"></script>
+    <script src="{% staticfiles 'js/main.js' %}"></script>
     
   </body>
 </html>
