@@ -33,7 +33,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 DEBUG_PROPAGATE_EXCEPTIONS=True
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['kc-real-estate.herokuapp.com/', 'localhost:8000']
 
 
 # Application definition
@@ -134,22 +134,23 @@ USE_TZ = True
 
 # set S3 as the place to store your files.
 DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
-STATICFILES_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
+# STATICFILES_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
 
 AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
 AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
 AWS_STORAGE_BUCKET_NAME = os.environ['AWS_STORAGE_BUCKET_NAME']
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 
-#static media settings
-STATIC_URL = 'https://' + AWS_STORAGE_BUCKET_NAME + '.s3.amazonaws.com/'
-# STATIC_URL = '/static/'
 MEDIA_URL = 'https://' + AWS_STORAGE_BUCKET_NAME + '.s3.amazonaws.com/' + 'media/'
-STATICFILES_DIRS = ( os.path.join(BASE_DIR, "kcre/static"), )
-# STATICFILES_DIRS = [ os.path.join(BASE_DIR, 'kcre/static'), ]
-#stuff colloecting from
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/') #stuff collecting to
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+#static media settings
+# STATIC_URL = 'https://' + AWS_STORAGE_BUCKET_NAME + '.s3.amazonaws.com/'
+
+# stuff colloecting from
+STATICFILES_DIRS = ( os.path.join(BASE_DIR, "kcre/static"), )# stuff colloecting from
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles/') # stuff collecting to
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
 # STATICFILES_FINDERS = (
 # 'django.contrib.staticfiles.finders.FileSystemFinder',
