@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ## KC Real Estate
 
 This app uses Django's Framework with Python; built on Windows via Bash Shell and Vitual Enviroment; a PostgreSQL database is used; and basic HTML, Bootstrap, JQuery, and Lightbox were utilized for styling/functionality. 
@@ -47,5 +46,3 @@ The Search form on the Home Page allows you to search current listings by Keywor
 
 Live app is available at: https://kc-real-estate.herokuapp.com/
 
-The admin login is available at: https://kc-real-estate.herokuapp.com/admin/ 
->>>>>>> 3bbc4eb6e72a1feba46b13a4f30f7eea5a4d8cfe
